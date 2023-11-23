@@ -1,0 +1,4 @@
+
+this was copied from: https://github.com/coffebar/dotfiles.git 
+
+Maded by coffebar
