@@ -37,7 +37,7 @@ def kill_process(pid):
 if __name__ == "__main__":
     pid = get_pid_by_name("waybar")
     if pid == None:
-        execute_process("waybar -c ~/.config/hypr/waybar/config.jsonc")
+        execute_process("waybar -c ~/.config/hypr/waybar/config.jsonc -s ~/.config/hypr/waybar/style.css")
     else:
         kill_process(pid)
     
