@@ -26,6 +26,7 @@
 - waybar (N)
 - waypaper (N)
 - C++ compiler (for the plugins) (N)
+- Go compiler (for my scripts) (N)
 - rofi (N)
 - cliphist (N)
 - wl-clipboard (N)
