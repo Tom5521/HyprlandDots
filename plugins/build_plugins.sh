@@ -17,3 +17,5 @@ cd hyprfocus || exit
 git pull
 
 make all
+
+cp hyprfocus.so ../../
