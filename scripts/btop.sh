@@ -1,3 +1,7 @@
 #!/bin/bash
 
-exec kitty -T Btop --class Btop --hold sh -c "btop"
+lib="$HOME/.config/hypr/scripts/shared.sh"
+
+source $lib
+
+RunKitty "Btop" "btop"

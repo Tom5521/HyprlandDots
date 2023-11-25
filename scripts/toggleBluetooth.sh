@@ -4,16 +4,15 @@ cmd_output=$(systemctl is-active bluetooth)
 echo "$cmd_output"
 
 if [[ $cmd_output == *"inactive"* ]]; then
-	echo "Starting bluetooth"
-	systemctl start bluetooth
-	if [ $? -ne 0 ]; then
-		exit 1
-	fi
-	blueman-manager &
+    echo "Starting bluetooth"
+    if ! systemctl start bluetooth; then
+        echo "Error starting bluetooth"
+        exit 1
+    fi
+    blueman-manager &
 else
-	echo "Stopping bluetooth"
-	systemctl stop bluetooth
-	if [ $? -ne 0 ]; then
-		echo "Error stopping bluetooth"
-	fi
+    echo "Stopping bluetooth"
+    if ! systemctl stop bluetooth; then
+        echo "Error stopping bluetooth"
+    fi
 fi
