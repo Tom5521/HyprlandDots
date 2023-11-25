@@ -31,7 +31,7 @@
 - wl-clipboard (N)
 - nm-applet (N)
 - xfce4-polkit (N)
-- xfce4-notifyd (O)
+- swaync (O)
 - blueman (O)
 - btop (O)
 - cava (O)
@@ -45,6 +45,7 @@
 #### **ModKey is SUPER**
 
 - **Toggle Waybar:** Press `ModKey` + `E` to execute the Python script for toggling Waybar visibility.
+- **Open Notification Center:** `ModKey` + `N`
 
 ### Window Control
 - **Close Active Window:** `ModKey` + `Q`
