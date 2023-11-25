@@ -26,7 +26,6 @@
 - waybar (N)
 - waypaper (N)
 - C++ compiler (for the plugins) (N)
-- Go compiler (for my scripts) (N)
 - rofi (N)
 - cliphist (N)
 - wl-clipboard (N)
@@ -38,6 +37,7 @@
 - cava (O)
 - kdeconnect (O)
 - grim (O)
+- Go compiler (for upgrade script) (O)
 
 
 ## Key Binds
