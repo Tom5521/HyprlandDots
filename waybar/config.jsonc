@@ -1,20 +1,23 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 34, // Waybar height (to be removed for auto height)
+    // "height": 35, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 6, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "hyprland/workspaces",
-        "idle_inhibitor",
+        //"hyprland/window",
+        //"hyprland/workspaces",
+        //"idle_inhibitor",
+        "custom/updates",
+        "custom/notification",
         "pulseaudio",
         "backlight",
         "network",
         "custom/updates"
     ],
     "modules-center": [
-        "hyprland/window"
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "cpu",
@@ -203,7 +206,7 @@
     },
     "custom/notification": {
         "tooltip": false,
-        "format": "{} {icon}",
+        "format": "{icon}",
         "format-icons": {
             "notification": "<span foreground='red'><sup></sup></span> ",
             "none": "",
@@ -229,6 +232,7 @@
             "updated": "󰂪"
         },
         "exec-if": "which waybar-module-pacman-updates",
-        "exec": "waybar-module-pacman-updates"
+        "exec": "waybar-module-pacman-updates",
+        "on-click": "~/.config/hypr/scripts/topgrade.sh"
     }
 }
