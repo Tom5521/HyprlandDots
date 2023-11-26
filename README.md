@@ -37,7 +37,6 @@
 - cava (O)
 - kdeconnect (O)
 - grim (O)
-- Go compiler (for upgrade script) (O)
 
 
 ## Key Binds
