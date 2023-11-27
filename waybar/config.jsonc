@@ -9,7 +9,7 @@
         //"hyprland/window",
         //"hyprland/workspaces",
         //"idle_inhibitor",
-        "custom/updates",
+        //"custom/updates",
         "custom/notification",
         "pulseaudio",
         "backlight",
