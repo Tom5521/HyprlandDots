@@ -12,7 +12,7 @@
 
 - Browser: Floorp 
 - Terminal: Kitty 
-- Music Player: Clementine(flatpak package)
+- Music Player: Clementine
 - Editor: Neovim
 - Bar: Waybar
 - Wallpaper: Waypaper
