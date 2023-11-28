@@ -31,7 +31,7 @@
 - wl-clipboard (N)
 - nm-applet (N)
 - xfce4-polkit (N)
-- hy3(git or not,depending on your hyprland version)
+- hy3 (N) (git or not,depending on your hyprland version)
 - swaync (O)
 - blueman (O)
 - btop (O)
