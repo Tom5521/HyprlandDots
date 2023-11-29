@@ -12,7 +12,7 @@
 
 - Browser: Floorp 
 - Terminal: Kitty 
-- Music Player: Clementine
+- Music Player: Strawberry
 - Editor: Neovim
 - Bar: Waybar
 - Wallpaper: Waypaper
