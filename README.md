@@ -8,10 +8,12 @@
 
 ![Screenshot](./screenshots/Screenshot3.png)
 
+![Happy christmas!](./screenshots/Screenshot4.png)
+
 ## Programs
 
-- Browser: Floorp 
-- Terminal: Kitty 
+- Browser: Floorp
+- Terminal: Kitty
 - Music Player: Strawberry
 - Editor: Neovim
 - Bar: Waybar
@@ -20,6 +22,7 @@
 ## Requirements
 
 ### O = Optional
+
 ### N = Obligatory
 
 - Hyprland (N)
@@ -39,16 +42,17 @@
 - kdeconnect (O)
 - grim (O)
 
-
 ## Key Binds
 
 ### MainMod Binding
+
 #### **ModKey is SUPER**
 
 - **Toggle Waybar:** Press `ModKey` + `E` to execute the Python script for toggling Waybar visibility.
 - **Open Notification Center:** `ModKey` + `N`
 
 ### Window Control
+
 - **Close Active Window:** `ModKey` + `Q`
 - **Exit Hyprland:** `ModKey` + `Shift` + `Q`
 - **Toggle Floating Mode:** `ModKey` + `Shift` + `Space`
@@ -61,16 +65,20 @@
 - **Resize Active Window:** `ModKey` + `L`, `J`, `I`, `K`
 
 ### Workspace Management
+
 - **Scroll Workspaces:** `ModKey` + Scroll (`Mouse Down` for next, `Mouse Up` for previous)
 
 ### Move/Resize Windows (Mouse Interaction)
+
 - **Move Window:** `ModKey` + `LMB` (Left Mouse Button)
 - **Resize Window:** `ModKey` + `RMB` (Right Mouse Button)
 
 ### Move Focus
+
 - **Move Focus:** `ModKey` + Arrow keys (`Left`, `Right`, `Up`, `Down`)
 
 ### Program Execution
+
 - **Launch Floorp:** `ModKey` + `W`
 - **Launch Rofi:** `ModKey` + `D`
 - **Launch Kitty Terminal:** `ModKey` + `Return`
@@ -86,26 +94,27 @@
 - **List and Copy Clipboard History with wofi:** `ModKey` + `V`
 - **Restore Waypaper with random image:** `ModKey` + `Shift` + `W`
 - **Run Cava visualizer script:** `ModKey` + `Shift` + `M`
+- **Run christmas visualizer script:** `ModKey` + `T`
 
 ### Control
+
 #### Volume Keybinds
+
 - **Increase Volume:** `XF86AudioRaiseVolume`
 - **Decrease Volume:** `XF86AudioLowerVolume`
 - **Mute/Unmute:** `XF86AudioMute`
 
 #### Brightness Keybinds
+
 - **Increase Brightness:** `XF86MonBrightnessUp`
 - **Decrease Brightness:** `XF86MonBrightnessDown`
 
 #### Multimedia Player Keys
+
 - **Play/Pause:** `XF86AudioPlay`
 - **Next Track:** `XF86AudioNext`
 - **Previous Track:** `XF86AudioPrev`
 
-
-
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
