@@ -14,7 +14,7 @@
 
 - Browser: Floorp
 - Terminal: Kitty
-- Music Player: Strawberry
+- Music Player: YT music :v
 - Editor: Neovim
 - Bar: Waybar
 - Wallpaper: Waypaper
@@ -83,12 +83,12 @@
 - **Launch Rofi:** `ModKey` + `D`
 - **Launch Kitty Terminal:** `ModKey` + `Return`
 - **Launch lxappearance:** `ModKey` + `O`
-- **Dispatch Workspace 3 and Open Thunar:** `ModKey` + `F`
-- **Launch glaunch script:** `ModKey` + `C`
+- **Open Thunar:** `ModKey` + `F`
+- **Open neovim in the selected folder:** `ModKey` + `C`
 - **Take Screenshot:** `Print` key
 - **Reboot System:** `ModKey` + `Shift` + `R`
 - **Launch btop:** `ModKey` + `H`
-- **Launch Clementine Music Player:** `ModKey` + `M`
+- **Launch Music Player:** `ModKey` + `M`
 - **Run System Upgrade Script:** `ModKey` + `Shift` + `U`
 - **Toggle Bluetooth with bluezToggle script:** `ModKey` + `Shift` + `B`
 - **List and Copy Clipboard History with wofi:** `ModKey` + `V`
