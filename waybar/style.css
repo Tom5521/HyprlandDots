@@ -1,6 +1,6 @@
-@define-color base00 #181818;
+@define-color base00 rgba(24, 24, 24, 0); /* Transparent background */
 @define-color base01 #2b2e37;
-@define-color base02 #3b3e47;
+@define-color base02 rgba(24,24,24,5);
 @define-color base03 #585858;
 @define-color base04 #b8b8b8;
 @define-color base05 #d8d8d8;
@@ -21,16 +21,17 @@
 }
 
 #waybar {
-	font-family: 'Source Code Pro', sans-serif;
-	font-size: 1.2em;
-	font-weight: 400;
+  font-family: 'Source Code Pro', sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
   color: @base04;
-  background: @base01;
+  background: rgba(24, 24, 24, 0); /* Transparent background */
 }
 
 #workspaces {
   margin: 0 4px;
 }
+
 
 #workspaces button {
   margin: 4px 0;
@@ -65,7 +66,21 @@
   border-left: none;
 }
 
-#custom-notification,#mode, #battery, #cpu, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #custom-storage, #custom-updates, #custom-weather, #custom-mail, #clock, #temperature {
+#custom-notification,
+#mode,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#backlight,
+#custom-storage,
+#custom-updates,
+#custom-weather,
+#custom-mail,
+#clock,
+#temperature {
   margin: 4px 2px;
   padding: 0 6px;
   background-color: @base02;
@@ -93,6 +108,7 @@
 
 #window {
   font-size: 0.9em;
-	font-weight: 400;
-	font-family: sans-serif;
+  font-weight: 400;
+  font-family: sans-serif;
 }
+
