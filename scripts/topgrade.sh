@@ -2,4 +2,4 @@
 
 source $HOME/.config/hypr/scripts/shared.sh
 
-RunKitty Topgrade topgrade
+RunKitty Topgrade "topgrade"

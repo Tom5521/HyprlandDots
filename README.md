@@ -12,7 +12,7 @@
 
 ## Programs
 
-- Browser: Floorp
+- Browser: Thorium
 - Terminal: Kitty
 - Music Player: YT music :v
 - Editor: Neovim
@@ -79,17 +79,17 @@
 
 ### Program Execution
 
-- **Launch Floorp:** `ModKey` + `W`
+- **Launch Browser:** `ModKey` + `W`
 - **Launch Rofi:** `ModKey` + `D`
 - **Launch Kitty Terminal:** `ModKey` + `Return`
 - **Launch lxappearance:** `ModKey` + `O`
-- **Open Thunar:** `ModKey` + `F`
+- **Open File explorer:** `ModKey` + `F`
 - **Open neovim in the selected folder:** `ModKey` + `C`
 - **Take Screenshot:** `Print` key
 - **Reboot System:** `ModKey` + `Shift` + `R`
 - **Launch btop:** `ModKey` + `H`
 - **Launch Music Player:** `ModKey` + `M`
-- **Run System Upgrade Script:** `ModKey` + `Shift` + `U`
+- **Run Topgrade:** `ModKey` + `Shift` + `U`
 - **Toggle Bluetooth with bluezToggle script:** `ModKey` + `Shift` + `B`
 - **List and Copy Clipboard History with wofi:** `ModKey` + `V`
 - **Restore Waypaper with random image:** `ModKey` + `Shift` + `W`
