@@ -1,6 +1,6 @@
 @define-color base00 rgba(24, 24, 24, 0); /* Transparent background */
 @define-color base01 #2b2e37;
-@define-color base02 rgba(24,24,24,5);
+@define-color base02 rgba(24,24,24,0.7);
 @define-color base03 #585858;
 @define-color base04 #b8b8b8;
 @define-color base05 #d8d8d8;
