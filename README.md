@@ -8,8 +8,6 @@
 
 ![Screenshot](./screenshots/Screenshot3.png)
 
-![Happy christmas!](./screenshots/Screenshot4.png)
-
 ## Programs
 
 - Browser: Thorium
@@ -34,7 +32,7 @@
 - wl-clipboard (N)
 - nm-applet (N)
 - xfce4-polkit (N)
-- hy3 (N) (git or not,depending on your hyprland version)
+- hy3 (O) (git or not,depending on your hyprland version)
 - swaync (O)
 - blueman (O)
 - btop (O)
