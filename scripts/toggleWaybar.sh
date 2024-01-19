@@ -17,7 +17,7 @@ killWaybar() {
 	if [ -n "$pid" ]; then
 		kill "$pid"
 	else
-		echo "Error killing waybar..."
+		zenity --error --text "Error killing waybar..."
 	fi
 }
 
