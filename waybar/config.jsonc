@@ -203,6 +203,7 @@
     //        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
     "framerate": 60,
     "autosens": 1,
+    "hide_on_silence": true,
     "sensitivity": 1,
     "bars": 10,
     "lower_cutoff_freq": 50,
