@@ -2,8 +2,10 @@
 
 cp rofi ~/.config/ -rf
 cp waypaper ~/.config/ -rf
+cp swaync ~/config/ -rf
 
 echo Building plugins...
-cd ./plugins/ || exit
+
+cd ./plugins/
 bash build_plugins.sh
 cd ..
