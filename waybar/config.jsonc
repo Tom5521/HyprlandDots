@@ -16,7 +16,7 @@
     "network",
     "custom/updates",
   ],
-  "modules-center": ["cava", "hyprland/workspaces", "cava"],
+  "modules-center": [/*"cava"*/ "hyprland/workspaces" /*"cava"*/],
   "modules-right": ["cpu", "memory", "temperature", "battery", "tray", "clock"],
   // Modules configuration
   "hyprland/workspaces": {
