@@ -8,4 +8,3 @@ echo Building plugins...
 
 cd ./plugins/
 bash build_plugins.sh
-cd ..
