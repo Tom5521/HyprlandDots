@@ -7,6 +7,12 @@ RunKitty() {
 
 Toggle() {
 	program=$1
-	exec_cmd=$2
-	fish -c "kill '$program'" || bash -c "$exec_cmd"
+	cmd=$2
+	(
+		fish -c "kill '$program'" &&
+			notify-send "$program killed."
+	) || (
+		notify-send "Starting $program..."
+		bash -c "$cmd"
+	)
 }

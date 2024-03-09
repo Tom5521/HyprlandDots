@@ -8,6 +8,6 @@ if [ ! -d "audiosource" ]; then
 fi
 
 program=audiosource
-exec_cmd="$HOME/.config/hypr/scripts/audiosource/audiosource run"
+cmd="$HOME/.config/hypr/scripts/audiosource/audiosource run"
 
-Toggle "$program" "$exec_cmd"
+Toggle "$program" "$cmd"
