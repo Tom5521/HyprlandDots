@@ -10,4 +10,4 @@ fi
 
 cd "$dir" || exit
 
-RunKitty "Neovim" "nvim"
+RunKitty "Neovim" "CC=clang nvim"
