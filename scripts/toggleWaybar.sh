@@ -1,28 +1,9 @@
 #!/bin/bash
 
-checkIfIsOn() {
-	if pidof waybar >/dev/null; then
-		return 0
-	else
-		return 1
-	fi
-}
+cd ~/.config/hypr/scripts/
+source ./shared.sh
 
-startWaybar() {
-	waybar -c ~/.config/hypr/waybar/config.jsonc -s ~/.config/hypr/waybar/style.css &
-}
+program=waybar
+exec_cmd="waybar -c ~/.config/hypr/waybar/config.jsonc -s ~/.config/hypr/waybar/style.css"
 
-killWaybar() {
-	pid=$(pidof waybar)
-	if [ -n "$pid" ]; then
-		kill "$pid"
-	else
-		zenity --error --text "Error killing waybar..."
-	fi
-}
-
-if checkIfIsOn; then
-	killWaybar
-else
-	startWaybar
-fi
+Toggle "$program" "$exec_cmd"

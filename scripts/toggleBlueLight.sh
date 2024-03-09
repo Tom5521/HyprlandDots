@@ -1,28 +1,9 @@
 #!/bin/bash
 
-checkIfIsOn() {
-	if pidof wlsunset >/dev/null; then
-		return 0
-	else
-		return 1
-	fi
-}
+cd ~/.config/hypr/scripts/
+source ./shared.sh
 
-start() {
-	wlsunset -T 5000
-}
+program=wlsunset
+exec_cmd="wlsunset -T 5500"
 
-killpid() {
-	pid=$(pidof wlsunset)
-	if [ -n "$pid" ]; then
-		kill "$pid"
-	else
-		zenity --error --text "Error killing wlsunset..."
-	fi
-}
-
-if checkIfIsOn; then
-	killpid
-else
-	start
-fi
+Toggle "$program" "$exec_cmd"

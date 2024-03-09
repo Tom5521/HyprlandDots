@@ -1,6 +1,7 @@
 #!/bin/bash
 
-source "$HOME/.config/hypr/scripts/shared.sh"
+cd ~/.config/hypr/scripts/
+source ./shared.sh
 
 dir=$(zenity --file-selection --directory)
 if [ $? -ne 0 ]; then
@@ -9,4 +10,4 @@ fi
 
 cd "$dir" || exit
 
-RunKitty "Neovim" "bash -c nvim"
+RunKitty "Neovim" "nvim"
