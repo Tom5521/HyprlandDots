@@ -1,18 +1,23 @@
 #!/bin/bash
 
 RunKitty() {
-	kitty $3 -T "$1" --class "$1" --hold sh -c "$2"
+	$SHELL -c "kitty $3 -T '$1' --class '$1' --hold sh -c '$2'"
 	return 0
 }
 
 Toggle() {
 	program=$1
 	cmd=$2
+	hide=$3
 	(
 		fish -c "kill '$program'" &&
-			notify-send "$program killed."
+			if [[ $hide -ne 0 ]]; then
+				notify-send "$program killed."
+			fi
 	) || (
-		notify-send "Starting $program..."
-		bash -c "$cmd"
+		if [[ $hide -ne 0 ]]; then
+			notify-send "Starting $program..."
+		fi
+		$SHELL -c "$cmd"
 	)
 }
