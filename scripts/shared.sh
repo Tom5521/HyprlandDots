@@ -9,15 +9,18 @@ Toggle() {
 	program=$1
 	cmd=$2
 	hide=$3
+	notify() {
+		if [ "$hide" == 1 ]; then
+			return
+		fi
+		notify-send "$@"
+	}
+
 	(
 		fish -c "kill '$program'" &&
-			if [[ $hide -ne 1 ]]; then
-				notify-send "$program killed."
-			fi
+			notify "$program killed."
 	) || (
-		if [[ $hide -ne 1 ]]; then
-			notify-send "Starting $program..."
-		fi
+		notify "Starting $program..."
 		$SHELL -c "$cmd"
 	)
 }
