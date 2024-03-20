@@ -1,9 +1,12 @@
 #!/bin/bash
 
 copy() {
-	cp -rf "$1" "$2"
+	if which advcp; then
+		advcp -rf "$1" "$2"
+	else
+		cp -rf "$1" "$2"
+	fi
 }
-
 copy rofi ~/.config/
 copy waypaper ~/.config/
 copy swaync ~/config/
