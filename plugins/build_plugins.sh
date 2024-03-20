@@ -1,21 +1,36 @@
 #!/bin/bash
 
-clonesDir="clones"
+build() {
+	org_path=$(pwd)
 
-if [ ! -d "$clonesDir" ]; then
-	mkdir $clonesDir
-fi
+	clonesDir="clones"
+	if [ ! -d "$clonesDir" ]; then
+		mkdir $clonesDir
+	fi
 
-cd $clonesDir || exit
+	cd $clonesDir || return
+	name=$1
+	git_link=$2
+	build_cmd=$3
+	bin_name=$4
+	if [[ "$bin_name" == "" ]]; then
+		bin_name="$name.so"
+	fi
+	if [ ! -d "$name" ]; then
+		git clone "$git_link"
+	fi
 
-if [ ! -d "hyprfocus" ]; then
-	git clone https://github.com/VortexCoyote/hyprfocus
-fi
+	cd "$name" || return
 
-cd hyprfocus || exit
+	echo Building "$name"...
+	if [[ "$build_cmd" == "" ]]; then
+		make all || return
+	else
+		$build_cmd || return
+	fi
 
-git pull
+	cd "$org_path" || return
+	cp "$clonesDir/$name/$bin_name" "$bin_name"
+}
 
-make all
-
-cp hyprfocus.so ../../
+build hyprfocus https://github.com/VortexCoyote/hyprfocus
