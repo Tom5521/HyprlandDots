@@ -89,7 +89,7 @@
 }
 
 #pulseaudio.muted {
-  color: @base0F;
+  color: red;
 }
 
 #pulseaudio.bluetooth {
@@ -103,7 +103,7 @@
 }
 
 #temperature.critical {
-  color: @base0F;
+  color: red;
 }
 
 #window {
