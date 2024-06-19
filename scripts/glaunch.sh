@@ -8,6 +8,4 @@ if [ $? -ne 0 ]; then
 	exit 0
 fi
 
-cd "$dir" || exit
-
-RunKitty "Neovim" "CC=clang nvim"
+./nvim.sh "$dir"
