@@ -3,6 +3,8 @@
 echo "You can't use this script, because is shit and it will destroy your files!"
 echo "Someday i will make it better..."
 
+exit 1
+
 copy() {
 	if which advcp; then
 		advcp -rf "$1" "$2"
