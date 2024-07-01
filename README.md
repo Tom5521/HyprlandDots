@@ -8,6 +8,12 @@
 
 ![Screenshot](./screenshots/Screenshot3.png)
 
+Current theme: Material Black Blueberry LA
+
+Icon theme: Papirus
+
+Mouse: Empty Butterfly White vr6
+
 ## Programs
 
 - Browser: Thorium
