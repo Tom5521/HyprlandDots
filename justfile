@@ -54,7 +54,7 @@ backup-files:
     # waypaper
     mv ~/.config/waypaper ~/.config/waypaper.bak
 
-update-submodules:
-    git add .
+update-neovim:
+    git add nvim
     git commit -m "Update submodules"
     git push
