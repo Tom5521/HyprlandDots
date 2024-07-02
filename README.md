@@ -16,9 +16,8 @@ Mouse: Empty Butterfly White vr6
 
 ## Programs
 
-- Browser: Thorium
+- Browser: Firefox
 - Terminal: Kitty
-- Music Player: YT music :v
 - Editor: Neovim
 - Bar: Waybar
 - Wallpaper: Waypaper
@@ -32,7 +31,7 @@ Mouse: Empty Butterfly White vr6
 - Hyprland (N)
 - waybar (N)
 - waypaper (N)
-- C++ compiler (for the plugins) (N)
+- C++ compiler (for the plugins) (O)
 - rofi (N)
 - cliphist (N)
 - wl-clipboard (N)
