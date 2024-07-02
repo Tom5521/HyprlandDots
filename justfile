@@ -54,5 +54,7 @@ backup-files:
     # waypaper
     mv ~/.config/waypaper ~/.config/waypaper.bak
 
-update:
-    git pull --recurse-submodules
+update-submodules:
+    git add .
+    git commit -m "Update submodules"
+    git push
