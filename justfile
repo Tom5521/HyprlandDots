@@ -37,7 +37,7 @@ install-packages:
 
 install-files:
     just backup-files
-    
+
     path="~/.config/hypr/"
     mkdir -p $path
     cp ./* $path -rf
