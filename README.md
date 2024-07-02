@@ -1,5 +1,15 @@
 # My hyprland dots
 
+## Installing
+
+You can install it running the following commands:
+
+```bash
+git clone https://github.com/Tom5521/HyprlandDots.git --recurse-submodules
+cd HyprlandDots
+just install
+```
+
 ## Screenshots
 
 ![Screenshot](./screenshots/Screenshot1.png)
