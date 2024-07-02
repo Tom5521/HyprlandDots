@@ -53,3 +53,6 @@ backup-files:
     mv ~/.config/hypr ~/.config/hypr.bak
     # waypaper
     mv ~/.config/waypaper ~/.config/waypaper.bak
+
+update:
+    git pull --recurse-submodules
