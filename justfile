@@ -17,6 +17,7 @@ PIPEWIRE_DEPENDENCIES := "pipewire gst-plugin-pipewire libpipewire libwireplumbe
 install:
     just install-dependencies
     just install-packages
+    just backup-files
     just install-files
 
 install-dependencies:
@@ -36,8 +37,6 @@ install-packages:
     flatpak install {{ FLATPAK_PACKAGES }} -y
 
 install-files:
-    just backup-files
-
     path="~/.config/hypr/"
     mkdir -p $path
     cp ./* $path -rf
