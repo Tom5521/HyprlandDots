@@ -16,18 +16,11 @@ Toggle() {
 		notify-send "$@"
 	}
 
-	fail() {
-		notify "Failure, error code:" + "$@"
-	}
-
 	(
-		(
-			fish -c "kill '$program'" || fail $?
-		) && (
+		fish -c "kill '$program'" &&
 			notify "$program killed."
-		)
 	) || (
 		notify "Starting $program..."
-		$SHELL -c "$cmd" || fail $?
+		$SHELL -c "$cmd"
 	)
 }
