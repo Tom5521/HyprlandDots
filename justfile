@@ -26,7 +26,7 @@ install-dependencies:
     yay -S swaync hyprland-git waybar waypaper swaybg neovim lua lua51 \
     btop kitty wlsunset topgrade zenity nwg-look nwg-clipman cliphist wl-clipboard network-manager-applet \
     kdeconnect kactivitymanagerd wofi grim slurp gtklock playerctl xdg-desktop-portal-hyprland-git \
-    mate-polkit alsa-utils hyprprop walker \
+    mate-polkit alsa-utils hyprprop walker fish \
     --noconfirm 
 
 install-packages:
@@ -43,7 +43,8 @@ install-files:
     cd $path
 
     ln -sr nvim ../nvim
-    ln -sr waypaper ../waypaper/
+    ln -sr waypaper ../waypaper
+    ln -sr fish ../fish
 
 backup-files:
     # neovim
@@ -52,6 +53,9 @@ backup-files:
     mv ~/.config/hypr ~/.config/hypr.bak
     # waypaper
     mv ~/.config/waypaper ~/.config/waypaper.bak
+    # fish
+    mv ~/.config/fish ~/.config/fish.bak
+
 
 update-neovim:
     git add nvim
