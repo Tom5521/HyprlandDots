@@ -1,6 +1,6 @@
 #!/bin/bash
 
 cd ~/.config/hypr/scripts/
-source ./shared.sh
+source shared.sh
 
 RunKitty "Btop" "btop"
