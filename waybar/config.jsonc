@@ -6,7 +6,6 @@
   "spacing": 6, // Gaps between modules (4px)
   // Choose the order of the modules
   "modules-left": [
-    //"hyprland/window",
     //"hyprland/workspaces",
     //"idle_inhibitor",
     //"custom/updates",
@@ -16,7 +15,7 @@
     "network",
     "custom/updates",
   ],
-  "modules-center": [/*"cava"*/ "hyprland/workspaces" /*"cava"*/],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": ["cpu", "memory", "temperature", "battery", "tray", "clock"],
   // Modules configuration
   "hyprland/workspaces": {
