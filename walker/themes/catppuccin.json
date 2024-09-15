@@ -1,0 +1,97 @@
+{
+  "ui": {
+    "anchors": {
+      "bottom": true,
+      "left": true,
+      "right": true,
+      "top": true
+    },
+    "fullscreen": true,
+    "ignore_exclusive": true,
+    "window": {
+      "box": {
+        "h_align": "center",
+        "margins": {
+          "bottom": 200,
+          "top": 200
+        },
+        "name": "box",
+        "orientation": "horizontal",
+        "revert": false,
+        "scroll": {
+          "h_scrollbar_policy": "automatic",
+          "list": {
+            "always_show": true,
+            "h_align": "fill",
+            "h_expand": true,
+            "item": {
+              "activation_label": {
+                "name": "activationlabel",
+                "width": 20,
+                "x_align": 1
+              },
+              "h_align": "fill",
+              "icon": {
+                "icon_size": "large",
+                "name": "icon",
+                "pixel_size": -1,
+                "theme": "Papirus",
+                "v_align": "center"
+              },
+              "name": "item",
+              "orientation": "horizontal",
+              "revert": false,
+              "spacing": 5,
+              "text": {
+                "h_align": "start",
+                "h_expand": true,
+                "label": {
+                  "h_align": "start",
+                  "h_expand": true,
+                  "name": "label"
+                },
+                "name": "text",
+                "orientation": "vertical",
+                "revert": true,
+                "sub": {
+                  "h_align": "start",
+                  "name": "sub"
+                }
+              }
+            },
+            "max_height": 300,
+            "max_width": 400,
+            "min_width": 400,
+            "name": "list",
+            "orientation": "vertical",
+            "width": 400
+          },
+          "overlay_scrolling": false,
+          "v_scrollbar_policy": "automatic"
+        },
+        "search": {
+          "input": {
+            "h_align": "fill",
+            "h_expand": true,
+            "icons": true,
+            "name": "input"
+          },
+          "name": "search",
+          "revert": false,
+          "spacing": 10,
+          "spinner": {
+            "hide": true,
+            "name": "spinner",
+            "v_align": "fill"
+          },
+          "v_align": "start",
+          "width": 400
+        },
+        "spacing": 10,
+        "v_align": "start"
+      },
+      "name": "window",
+      "v_align": "start"
+    }
+  }
+}
