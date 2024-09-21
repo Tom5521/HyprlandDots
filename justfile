@@ -47,6 +47,9 @@ install-files:
 
     ln -sr ./usr/* ../
 
+install-system-configs:
+    sudo ./system/install.sh
+
 backup-files:
     # fish
     mv ~/.config/fish ~/.config/fish.bak
