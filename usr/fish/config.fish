@@ -1,9 +1,12 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    export GOPHERJS_GOROOT="$(go1.19.13 env GOROOT)"
+
+
     set fish_greeting
-    set QT_STYLE_OVERRIDE Fusion
-    export CC="clang"
+    set CC "clang"
+
+
+
     function bind_bang
     switch (commandline -t)[-1]
         case "!"

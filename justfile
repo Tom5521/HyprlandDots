@@ -3,8 +3,8 @@
 WEB_BROWSER := "firefox"
 MUSIC_PLAYER := "strawberry"
 FILE_EXPLORER := "thunar"
-OTHER_PACKAGES := "go scrcpy"
-FLATPAK_PACKAGES := "org.kde.kdenlive"
+OTHER_PACKAGES := "go scrcpy kdenlive"
+# FLATPAK_PACKAGES := "org.kde.kdenlive"
 
 # Installation process configurations
 
@@ -21,43 +21,49 @@ install:
     just install-files
 
 install-dependencies:
+    #!/usr/bin/bash
     yay={{ AUR_MANAGER }}
     yay -S {{ PIPEWIRE_DEPENDENCIES }} --noconfirm
-    yay -S swaync hyprland-git waybar waypaper swaybg neovim lua lua51 \
+    yay -S base-devel cmake swaync hyprland-git waybar waypaper swaybg neovim lua lua51 \
     btop kitty wlsunset topgrade zenity nwg-look nwg-clipman cliphist wl-clipboard network-manager-applet \
     kdeconnect kactivitymanagerd wofi grim slurp gtklock playerctl xdg-desktop-portal-hyprland-git \
     mate-polkit alsa-utils hyprprop walker fish luarocks tree-sitter-lua wlroots \
     --noconfirm 
 
 install-packages:
+    #!/usr/bin/bash
     yay={{ AUR_MANAGER }}
     yay -Syy
     just install-dependencies
     yay -S {{ MUSIC_PLAYER }} {{ WEB_BROWSER }} {{ FILE_EXPLORER }} {{ OTHER_PACKAGES }} --noconfirm
-    flatpak install {{ FLATPAK_PACKAGES }} -y
+    # flatpak install {{ FLATPAK_PACKAGES }} -y
 
 install-files:
+    #!/usr/bin/bash
     path="~/.config/hypr/"
     mkdir -p $path
     cp ./* $path -rf
     cd $path
 
-    ln -sr nvim ../nvim
-    ln -sr waypaper ../waypaper
-    ln -sr fish ../fish
-    ln -sr walker ../walker
+    ln -sr ./usr/* ../
 
 backup-files:
-    # neovim
-    mv ~/.config/nvim ~/.config/nvim.bak
-    # hyprland
-    mv ~/.config/hypr ~/.config/hypr.bak
-    # waypaper
-    mv ~/.config/waypaper ~/.config/waypaper.bak
     # fish
     mv ~/.config/fish ~/.config/fish.bak
+    # neovim
+    mv ~/.config/nvim ~/.config/nvim.bak
+    # swaync
+    mv ~/.config/swaync ~/.config/swaync.bak
     # walker
     mv ~/.config/walker ~/.config/walker.bak
+    # waybar
+    mv ~/.config/waybar ~/.config/waybar.bak
+    # waypaper
+    mv ~/.config/waypaper ~/.config/waypaper.bak
+
+
+    # hyprland
+    mv ~/.config/hypr ~/.config/hypr.bak
 
 
 update-neovim:
