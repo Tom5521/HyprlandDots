@@ -36,7 +36,7 @@ install-packages:
     yay -Syy
     just install-dependencies
     yay -S {{ MUSIC_PLAYER }} {{ WEB_BROWSER }} {{ FILE_EXPLORER }} {{ OTHER_PACKAGES }} --noconfirm
-    # flatpak install {{ FLATPAK_PACKAGES }} -y
+#   flatpak install {{ FLATPAK_PACKAGES }} -y
 
 install-files:
     #!/usr/bin/bash
@@ -70,6 +70,6 @@ backup-files:
 
 
 update-neovim:
-    git add nvim
+    git add usr/nvim
     git commit -m "Update submodules"
     git push
