@@ -4,7 +4,7 @@ cd ~/.config/hypr/scripts/
 source ./shared.sh
 
 if [ ! -d "audiosource" ]; then
-	git clone https://github.com/gdzx/audiosource.git || exit
+	git clone https://github.com/gdzx/audiosource.git || exit $?
 fi
 
 program=audiosource
