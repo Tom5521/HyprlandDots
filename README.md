@@ -5,7 +5,8 @@
 You can install it running the following commands:
 
 ```bash
-git clone https://github.com/Tom5521/HyprlandDots.git --recurse-submodules
+cd /tmp
+git clone https://github.com/Tom5521/HyprlandDots.git --recursive
 cd HyprlandDots
 just install
 ```
@@ -18,115 +19,82 @@ just install
 
 ![Screenshot](./screenshots/Screenshot3.png)
 
-Current theme: Material Black Blueberry LA
+Current theme: Material Black Cherry
 
-Icon theme: Papirus
+Icon theme: Papirus Dark
 
 Mouse: Empty Butterfly White vr6
 
-## Programs
+## Keybinds
 
-- Browser: Firefox
-- Terminal: Kitty
-- Editor: Neovim
-- Bar: Waybar
-- Wallpaper: Waypaper
-
-## Requirements
-
-### O = Optional
-
-### N = Obligatory
-
-- Hyprland (N)
-- waybar (N)
-- waypaper (N)
-- C++ compiler (for the plugins) (O)
-- rofi (N)
-- cliphist (N)
-- wl-clipboard (N)
-- nm-applet (N)
-- xfce4-polkit (N)
-- hy3 (O) (git or not,depending on your hyprland version)
-- swaync (O)
-- blueman (O)
-- btop (O)
-- cava (O)
-- kdeconnect (O)
-- grim (O)
-
-## Key Binds
-
-### MainMod Binding
-
-#### **ModKey is SUPER**
-
-- **Toggle Waybar:** Press `ModKey` + `E` to execute the Python script for toggling Waybar visibility.
-- **Open Notification Center:** `ModKey` + `N`
-
-### Window Control
-
-- **Close Active Window:** `ModKey` + `Q`
-- **Exit Hyprland:** `ModKey` + `Shift` + `Q`
-- **Toggle Floating Mode:** `ModKey` + `Shift` + `Space`
-- **Pseudo dwindle:** `ModKey` + `P`
-- **Toggle Split in dwindle:** `ModKey` + `Shift` + `J`
-- **Fullscreen:** `ModKey` + `Code:95`
-- **Toggle Window Group:** `ModKey` + `S`
-- **Pin Window:** `ModKey` + `Shift` + `P`
-- **Move Window:** `ModKey` + `Shift` + Arrow keys (`Left`, `Right`, `Up`, `Down`)
-- **Resize Active Window:** `ModKey` + `L`, `J`, `I`, `K`
-
-### Workspace Management
-
-- **Scroll Workspaces:** `ModKey` + Scroll (`Mouse Down` for next, `Mouse Up` for previous)
-
-### Move/Resize Windows (Mouse Interaction)
-
-- **Move Window:** `ModKey` + `LMB` (Left Mouse Button)
-- **Resize Window:** `ModKey` + `RMB` (Right Mouse Button)
-
-### Move Focus
-
-- **Move Focus:** `ModKey` + Arrow keys (`Left`, `Right`, `Up`, `Down`)
-
-### Program Execution
-
-- **Launch Browser:** `ModKey` + `W`
-- **Launch Rofi:** `ModKey` + `D`
-- **Launch Kitty Terminal:** `ModKey` + `Return`
-- **Launch lxappearance:** `ModKey` + `O`
-- **Open File explorer:** `ModKey` + `F`
-- **Open neovim in the selected folder:** `ModKey` + `C`
-- **Take Screenshot:** `Print` key
-- **Reboot System:** `ModKey` + `Shift` + `R`
-- **Launch btop:** `ModKey` + `H`
-- **Launch Music Player:** `ModKey` + `M`
-- **Run Topgrade:** `ModKey` + `Shift` + `U`
-- **Toggle Bluetooth with bluezToggle script:** `ModKey` + `Shift` + `B`
-- **List and Copy Clipboard History with wofi:** `ModKey` + `V`
-- **Restore Waypaper with random image:** `ModKey` + `Shift` + `W`
-- **Run Cava visualizer script:** `ModKey` + `Shift` + `M`
-- **Run christmas visualizer script:** `ModKey` + `T`
-
-### Control
-
-#### Volume Keybinds
-
-- **Increase Volume:** `XF86AudioRaiseVolume`
-- **Decrease Volume:** `XF86AudioLowerVolume`
-- **Mute/Unmute:** `XF86AudioMute`
-
-#### Brightness Keybinds
-
-- **Increase Brightness:** `XF86MonBrightnessUp`
-- **Decrease Brightness:** `XF86MonBrightnessDown`
-
-#### Multimedia Player Keys
-
-- **Play/Pause:** `XF86AudioPlay`
-- **Next Track:** `XF86AudioNext`
-- **Previous Track:** `XF86AudioPrev`
+| **Keybind**                           | **Action**                                            |
+| ------------------------------------- | ----------------------------------------------------- |
+| `$mainMod + Q`                        | Kill the active window                                |
+| `$mainMod + SHIFT + Q`                | Exit the window manager                               |
+| `$mainMod + SHIFT + Space`            | Toggle floating mode for the active window            |
+| `$mainMod + I`                        | Pseudo mode for window tiling (dwindle layout)        |
+| `$mainMod + SHIFT + J`                | Toggle split layout (dwindle layout)                  |
+| `$mainMod + _ (code:95)`              | Toggle fullscreen mode                                |
+| `$mainMod + S`                        | Toggle window grouping                                |
+| `$mainMod + P`                        | Pin the active window                                 |
+| `$mainMod + SHIFT + Left`             | Move window left                                      |
+| `$mainMod + SHIFT + Right`            | Move window right                                     |
+| `$mainMod + SHIFT + Up`               | Move window up                                        |
+| `$mainMod + SHIFT + Down`             | Move window down                                      |
+| `$mainMod + L`                        | Resize window (increase width by 10)                  |
+| `$mainMod + J`                        | Resize window (decrease width by 10)                  |
+| `$mainMod + I`                        | Resize window (decrease height by 10)                 |
+| `$mainMod + K`                        | Resize window (increase height by 10)                 |
+| `$mainMod + mouse_down`               | Switch to next workspace                              |
+| `$mainMod + mouse_up`                 | Switch to previous workspace                          |
+| `$mainMod + Left Mouse Button (LMB)`  | Move window by dragging                               |
+| `$mainMod + Right Mouse Button (RMB)` | Resize window by dragging                             |
+| `$mainMod + Left Arrow`               | Move focus to the window on the left                  |
+| `$mainMod + Right Arrow`              | Move focus to the window on the right                 |
+| `$mainMod + Up Arrow`                 | Move focus to the window above                        |
+| `$mainMod + Down Arrow`               | Move focus to the window below                        |
+| `$mainMod + W`                        | Launch Firefox browser                                |
+| `$mainMod + D`                        | Launch `walker` program                               |
+| `$mainMod + Enter`                    | Launch `kitty` terminal                               |
+| `$mainMod + O`                        | Launch `nwg-look` to change GTK themes                |
+| `$mainMod + F`                        | Launch `thunar` file manager                          |
+| `$mainMod + C`                        | Launch Neovim                                         |
+| `$mainMod + SHIFT + C`                | Launch VSCode                                         |
+| `Print`                               | Capture screenshot using `grim`                       |
+| `$mainMod + SHIFT + R`                | Reboot the system                                     |
+| `$mainMod + SHIFT + P`                | Power off the system                                  |
+| `$mainMod + H`                        | Launch `btop` system monitor                          |
+| `$mainMod + M`                        | Launch music player                                   |
+| `$mainMod + SHIFT + U`                | Launch `topgrade` update manager                      |
+| `$mainMod + SHIFT + B`                | Toggle Bluetooth                                      |
+| `$mainMod + V`                        | Show clipboard using `cliphist`                       |
+| `$mainMod + SHIFT + W`                | Set a random wallpaper using `waypaper`               |
+| `$mainMod + SHIFT + M`                | Launch `cava` audio visualizer                        |
+| `$mainMod + N`                        | Show notifications using `swaync-client`              |
+| `$mainMod + SHIFT + Enter`            | Launch `kitty` terminal in a special workspace        |
+| `$mainMod + T`                        | Launch `kitty` terminal in a specific directory       |
+| `$mainMod + SHIFT + H`                | Launch `btop` in a special workspace                  |
+| `$mainMod + E`                        | Toggle `waybar`                                       |
+| `$mainMod + L`                        | Lock screen using `gtklock`                           |
+| `$mainMod + SHIFT + N`                | Toggle blue light filter                              |
+| `$mainMod + SHIFT + A`                | Toggle audio source to use phone as a microphone      |
+| `$mainMod + SHIFT + S`                | Toggle `scrcpy` audio                                 |
+| `$mainMod + CTRL + S`                 | Launch `tcpip-scrcpy`                                 |
+| `$mainMod + SHIFT + V`                | Launch `nwg-clipman` clipboard manager                |
+| `XF86AudioRaiseVolume`                | Increase system volume by 5%                          |
+| `XF86AudioLowerVolume`                | Decrease system volume by 5%                          |
+| `XF86AudioMute`                       | Toggle system audio mute                              |
+| `XF86MonBrightnessUp`                 | Increase screen brightness by 10%                     |
+| `XF86MonBrightnessDown`               | Decrease screen brightness by 10%                     |
+| `XF86AudioPlay`                       | Play/pause media                                      |
+| `XF86AudioNext`                       | Skip to next media track                              |
+| `XF86AudioPrev`                       | Go to previous media track                            |
+| `$mainMod + Tab`                      | Switch to next workspace                              |
+| `$mainMod + SHIFT + Tab`              | Switch to previous workspace                          |
+| `$mainMod + [0-9]`                    | Switch to a specific workspace (1-10)                 |
+| `$mainMod + K`                        | Switch to workspace 11 (Virtual Machines)             |
+| `$mainMod + SHIFT + [0-9]`            | Move active window to a specific workspace (1-10)     |
+| `$mainMod + SHIFT + K`                | Move active window to workspace 11 (Virtual Machines) |
 
 ## License
 
