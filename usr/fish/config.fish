@@ -5,7 +5,7 @@ if status is-interactive
         if test (whoami) = "root"
             cowsay -e "0" -f "$cows/shark.cow" "What are we breaking today, boss?" | lolcat -a -d 1
         else
-            cowsay -e "^" -f "$cows/fish.cow" "Welcome to fish shell $(whoami)!" | lolcat
+            cowsay -e "^" -f "$cows/fish.cow" "Welcome to fish shell, $(whoami)!" | lolcat
         end
     end
     function get-public-ip
