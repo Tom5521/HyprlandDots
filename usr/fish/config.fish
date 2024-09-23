@@ -1,7 +1,13 @@
 if status is-interactive 
     # Functions
-    function fish_greeting
-        cowsay -f ~/.config/fish/fish.cow "Welcome to fish shell $(whoami)!" | lolcat
+    function fish_greeting 
+        set cow ~/.config/fish
+        if test $(whoami) = "root"
+            cowsay -e "0" -f "$cow/shark.cow" "What will we break today root?" | lolcat -a -d 1
+            return
+        else
+            cowsay -e "^" -f "$cow/fish.cow" "Welcome to fish shell $(whoami)!" | lolcat
+        end
     end
     function get-public-ip
         ip addr show wlan0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1 
