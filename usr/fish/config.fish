@@ -1,12 +1,12 @@
 if status is-interactive 
     # Functions
     function fish_greeting 
-        set cow ~/.config/fish
+        set cows ~/.config/fish
         if test $(whoami) = "root"
-            cowsay -e "0" -f "$cow/shark.cow" "What are we breaking today, boss?" | lolcat -a -d 1
+            cowsay -e "0" -f "$cows/shark.cow" "What are we breaking today, boss?" | lolcat -a -d 1
             return
         else
-            cowsay -e "^" -f "$cow/fish.cow" "Welcome to fish shell $(whoami)!" | lolcat
+            cowsay -e "^" -f "$cows/fish.cow" "Welcome to fish shell $(whoami)!" | lolcat
         end
     end
     function get-public-ip
