@@ -3,7 +3,7 @@ if status is-interactive
     function fish_greeting 
         set cow ~/.config/fish
         if test $(whoami) = "root"
-            cowsay -e "0" -f "$cow/shark.cow" "What will we break today root?" | lolcat -a -d 1
+            cowsay -e "0" -f "$cow/shark.cow" "What are we breaking today, boss?" | lolcat -a -d 1
             return
         else
             cowsay -e "^" -f "$cow/fish.cow" "Welcome to fish shell $(whoami)!" | lolcat
