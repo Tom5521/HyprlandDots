@@ -1,33 +1,49 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-
-
-    set fish_greeting
-    set CC "clang"
-
-    function bind_bang
-        switch (commandline -t)[-1]
-            case "!"
-                commandline -t -- $history[1]
-                commandline -f repaint
-            case "*"
-                commandline -i !
-        end
+if status is-interactive 
+    # Functions
+    function fish_greeting
+        cowsay -f ~/.config/fish/fish.cow "Welcome to fish shell $(whoami)!" | lolcat
+    end
+    function get-public-ip
+        ip addr show wlan0 | grep "inet\b" | awk '{print $2}' | cut -d/ -f1 
+    end
+    function see-starwars
+        telnet towel.blinkenlights.nl $argv
     end
 
-    function bind_dollar
-        switch (commandline -t)[-1]
-            case "!"
-                commandline -f backward-delete-char history-token-search-backward
-            case "*"
-                commandline -i '$'
-        end
-    end
+    # Aliases
+    function ls;exa --icons $argv;end
+    function mv;advmv -g $argv;end
+    function cp;advcp -g $argv;end
+    function cls;clear $argv;end
+    function la;exa -la --icons $argv;end
+    function dir;ls $argv;end
+    function please;sudo $argv;end
+    function s;sudo $argv;end
+    function poweroff;systemctl poweroff $argv;end
+    function mkd;mkdir $argv;end
+    function walk;walk --icons $argv;end
+    function umount;please umount $argv;end
+    function mount;please mount $argv;end
+    function claer;cls $argv;end
+    function docker;please docker $argv;end
+    function hyprconf;cd ~/.config/hypr/;end
+    function i3conf;cd ~/.config/i3/;end
+    function fdisk;please fdisk $argv;end
+    function spacman;please pacman $argv;end
+    function fishconf;cd ~/.config/fish;end
 
-    function fish_user_key_bindings
-        bind ! bind_bang
-        bind '$' bind_dollar
-    end
+    # Sets
 
+    # C/C++ compilers.
+    set CC clang
+    set CXX clang++
 
+    # WIN32 C/C++ cross compilers
+    set WIN32_CC x86_64-w64-mingw32-gcc
+    set WIN32_CXX x86_64-w64-mingw32-g++
+
+    set EDITOR nvim
+
+    # Add ~/go/bin/ and ~/bin to the PATH
+    set PATH $HOME/go/bin $HOME/bin $PATH
 end
