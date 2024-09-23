@@ -4,7 +4,6 @@ if status is-interactive
         set cows ~/.config/fish
         if test (whoami) = "root"
             cowsay -e "0" -f "$cows/shark.cow" "What are we breaking today, boss?" | lolcat -a -d 1
-            return
         else
             cowsay -e "^" -f "$cows/fish.cow" "Welcome to fish shell $(whoami)!" | lolcat
         end
