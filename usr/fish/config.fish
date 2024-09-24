@@ -1,6 +1,11 @@
 if status is-interactive 
+    set SKIP_GREETING 0 # 1 to disable usr and root grettings
+
     # Functions
-    function fish_greeting 
+    function fish_greeting
+        if test $SKIP_GREETING -eq 1
+            return
+        end
         set cows ~/.config/fish
         if test (whoami) = "root"
             cowsay -e "0" -f "$cows/shark.cow" "What are we breaking today, boss?" | lolcat -a -d 1
@@ -39,7 +44,7 @@ if status is-interactive
 
     # Sets
 
-    # C/C++ compilers.
+    # C/C++ compilers
     set CC clang
     set CXX clang++
 
@@ -48,6 +53,8 @@ if status is-interactive
     set WIN32_CXX x86_64-w64-mingw32-g++
 
     set EDITOR nvim
+    
+    set USR $USER
 
     # Add ~/go/bin/ and ~/bin to the PATH
     set PATH $HOME/go/bin $HOME/bin $PATH
