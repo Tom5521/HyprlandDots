@@ -16,11 +16,11 @@ if status is-interactive
     end
 
     # Aliases
-    function ls;exa --icons $argv;end
+    function ls;eza --icons $argv;end
     function mv;advmv -g $argv;end
     function cp;advcp -g $argv;end
     function cls;clear $argv;end
-    function la;exa -la --icons $argv;end
+    function la;eza -la --icons $argv;end
     function dir;ls $argv;end
     function please;sudo $argv;end
     function s;sudo $argv;end
