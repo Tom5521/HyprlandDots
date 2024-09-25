@@ -35,21 +35,30 @@ if status is-interactive
     end
 
     function cp
-        command -v advcp $argv
+        command -v advcp > /dev/null
         if test $status -eq 0
-            echo $status
             advcp -g $argv
         else
             $PREFIX/bin/cp $argv
         end
     end
 
+
+    function eza
+        command -v eza > /dev/null
+        if test $status -eq 0
+            $PREFIX/bin/eza --icons $argv
+        else
+            $PREFIX/bin/ls $argv
+        end
+    end
+
     # Aliases
     function which;command -v $argv;end
-    function ls;eza --icons $argv;end
+    function ls;eza $argv;end
     function cls;clear $argv;end
-    function la;eza -la --icons $argv;end
-    function dir;ls $argv;end
+    function la;eza -la $argv;end
+    function dir;$PREFIX/bin/ls $argv;end
     function please;sudo $argv;end
     function s;sudo $argv;end
     function poweroff;systemctl poweroff $argv;end
