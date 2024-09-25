@@ -1,7 +1,7 @@
 if status is-interactive
     set SKIP_GREETING 0 # 1 to disable usr and root grettings
 
-    source ./check-termux.fish
+    source $__fish_config_dir/check-termux.fish
 
     # Functions
     function fish_greeting
