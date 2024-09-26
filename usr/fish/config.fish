@@ -58,7 +58,8 @@ if status is-interactive
     function ls;eza $argv;end
     function cls;clear $argv;end
     function la;eza -la $argv;end
-    function dir;$PREFIX/bin/ls $argv;end
+    function dir;$PREFIX/bin/ls --color $argv;end
+    function old-dir;$PREFIX/in/dir $argv;end
     function please;sudo $argv;end
     function s;sudo $argv;end
     function poweroff;systemctl poweroff $argv;end
