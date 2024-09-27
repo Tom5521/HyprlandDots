@@ -1,3 +1,4 @@
 [submodule "usr/nvim"]
 	path = usr/nvim
+	branch = main
 	url = https://github.com/Tom5521/nvim
