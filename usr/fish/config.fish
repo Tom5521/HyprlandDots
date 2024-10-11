@@ -24,6 +24,25 @@ if status is-interactive
         telnet towel.blinkenlights.nl $argv
     end
 
+
+    # Sets
+
+    # C/C++ compilers
+    set CC clang
+    set CXX clang++
+
+    # WIN32 C/C++ cross compilers
+    set WIN32_CC x86_64-w64-mingw32-gcc
+    set WIN32_CXX x86_64-w64-mingw32-g++
+
+    set EDITOR nvim
+    
+    set USR $USER
+
+    # Add ~/go/bin/ and ~/bin to the PATH
+    set PATH $HOME/go/bin $HOME/bin $PATH
+
+
     function mv
         command -v advmv > /dev/null
         if test $status -eq 0
@@ -74,21 +93,5 @@ if status is-interactive
     function fdisk;please fdisk $argv;end
     function spacman;please pacman $argv;end
     function fishconf;cd ~/.config/fish;end
-
-    # Sets
-
-    # C/C++ compilers
-    set CC clang
-    set CXX clang++
-
-    # WIN32 C/C++ cross compilers
-    set WIN32_CC x86_64-w64-mingw32-gcc
-    set WIN32_CXX x86_64-w64-mingw32-g++
-
-    set EDITOR nvim
-    
-    set USR $USER
-
-    # Add ~/go/bin/ and ~/bin to the PATH
-    set PATH $HOME/go/bin $HOME/bin $PATH
+    function nvim;CC=$CC $PREFIX/bin/nvim $argv;end
 end
