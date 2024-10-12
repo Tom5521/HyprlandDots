@@ -94,4 +94,5 @@ if status is-interactive
     function spacman;please pacman $argv;end
     function fishconf;cd ~/.config/fish;end
     function nvim;CC=$CC $PREFIX/bin/nvim $argv;end
+    function 7z;7zz $argv;end
 end
