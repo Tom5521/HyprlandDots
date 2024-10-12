@@ -19,6 +19,8 @@ just install
 
 ![Screenshot](./screenshots/Screenshot3.png)
 
+![Screenshot](./screenshots/Screenshot4.png)
+
 Current theme: Material Black Cherry
 
 Icon theme: Papirus Dark
