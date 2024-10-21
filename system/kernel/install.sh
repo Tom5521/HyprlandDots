@@ -4,8 +4,10 @@
 rm -rf ./linux-clear
 
 git clone https://aur.archlinux.org/linux-clear.git
-patch ./linux-clear/PKGBUILD ./changes.patch
+cd ./linux-clear || exit $?
+# checkout to version 6.10
+git checkout 828cd003563a82b7a2755036aab04742161333a1
 
-cd linux-clear || exit $?
+patch ./PKGBUILD ../changes.patch
 
-makepkg -si --noconfirm
+time makepkg -si --noconfirm
