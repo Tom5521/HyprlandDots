@@ -1,11 +1,11 @@
 # User settings
 
-WEB_BROWSER := "firefox"
+WEB_BROWSER := "thorium-browser-bin"
 MUSIC_PLAYER := "strawberry"
 FILE_EXPLORER := "thunar"
 OTHER_PACKAGES := "go scrcpy kdenlive"
-# FLATPAK_PACKAGES := "org.kde.kdenlive"
 
+# FLATPAK_PACKAGES := "org.kde.kdenlive"
 # Installation process configurations
 
 AUR_MANAGER := "yay"
@@ -19,6 +19,14 @@ install:
     just install-packages
     just backup-files
     just install-files
+
+install-aur-manager:
+    #!/bin/bash
+    cd /tmp
+    git clone https://aur.archlinux.org/packages/{{ AUR_MANAGER }}
+    cd {{AUR_MANAGER}}
+    makepkg -si --noconfirm
+    cd
 
 install-dependencies:
     #!/usr/bin/bash
@@ -36,6 +44,7 @@ install-packages:
     yay -Syy
     just install-dependencies
     yay -S {{ MUSIC_PLAYER }} {{ WEB_BROWSER }} {{ FILE_EXPLORER }} {{ OTHER_PACKAGES }} --noconfirm
+
 #   flatpak install {{ FLATPAK_PACKAGES }} -y
 
 install-files:
@@ -67,7 +76,6 @@ backup-files:
 
     # hyprland
     mv ~/.config/hypr ~/.config/hypr.bak
-
 
 update-neovim:
     git add usr/nvim
