@@ -56,6 +56,10 @@ install-files:
 
     ln -sr ./usr/* ../
 
+install-hyprshade:
+    hyprshade install
+    systemctl --user enable --now hyprshade.timer
+
 install-system-configs:
     sudo ./system/install.sh
 
