@@ -3,4 +3,4 @@
 cd ~/.config/hypr/scripts/
 source ./shared.sh
 
-RunKitty cava cava "--override background_opacity=0 "
+RunKitty hypr-bg "sleep 1 && cava" "--override background_opacity=0"
