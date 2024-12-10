@@ -32,10 +32,11 @@ install-dependencies:
     #!/usr/bin/bash
     yay={{ AUR_MANAGER }}
     yay -S {{ PIPEWIRE_DEPENDENCIES }} --noconfirm
-    yay -S base-devel rustup cmake swaync hyprland-git waybar waypaper swww neovim lua lua51 \
+    yay -S base-devel rustup cmake swaync hyprland-git waybar neovim lua lua51 \
     btop kitty wlsunset topgrade zenity nwg-look nwg-clipman cliphist wl-clipboard network-manager-applet \
     kdeconnect kactivitymanagerd wofi grim slurp gtklock playerctl xdg-desktop-portal-hyprland-git \
-    mate-polkit alsa-utils hyprprop fish luarocks tree-sitter-lua wlroots 7-zip hyprshade hyprlauncher \
+    mate-polkit alsa-utils hyprprop fish luarocks tree-sitter-lua wlroots 7-zip hyprshade hyprlauncher glava \
+    wpaperd nwg-clipman \
     --noconfirm 
 
 install-packages:
