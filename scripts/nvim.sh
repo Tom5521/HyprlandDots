@@ -4,4 +4,4 @@ source ./shared.sh
 
 cd "$1" || exit $?
 
-RunKitty "Neovim" "CC=clang nvim"
+RunKitty "Neovim" "nvim"

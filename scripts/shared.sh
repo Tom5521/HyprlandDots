@@ -3,9 +3,10 @@
 # $1 = class & title, $2 = command, $3 = optional arguments.
 RunKitty() {
 	# I run the command with the shell to make kitty run with the user's custom environment variables.
-	$SHELL -c "kitty $3 -T '$1' --class '$1' --hold sh -c '$2'"
+	kitty $3 -T "$1" --class "$1" -e $SHELL -c "$2"
 }
 
+# $1 = program, $2 = command, $3 = hide
 Toggle() {
 	program=$1
 	cmd=$2
