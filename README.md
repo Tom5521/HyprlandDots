@@ -13,13 +13,16 @@ just install
 
 ## Screenshots
 
-![Screenshot](./screenshots/Screenshot1.png)
-
-![Screenshot](./screenshots/Screenshot2.png)
+<!-- ![Screenshot](./screenshots/Screenshot1.png) -->
+<!-- ![Screenshot](./screenshots/Screenshot2.png) -->
 
 ![Screenshot](./screenshots/Screenshot3.png)
 
 ![Screenshot](./screenshots/Screenshot4.png)
+
+
+https://github.com/user-attachments/assets/e81512cf-3eaa-4534-85f7-dd55534dd79e
+
 
 Current theme: Material Black Cherry
 
