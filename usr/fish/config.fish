@@ -28,6 +28,8 @@ if status is-interactive
     # Sets
 
     # C/C++ compilers
+    #
+    # I LOVE clang!
     set CC clang
     set CXX clang++
 
@@ -74,7 +76,7 @@ if status is-interactive
     end
 
     # Aliases
-    function which;command -v $argv;end
+    function which;command -v $argv;end # Why the fuck which is deprecated?!?!?!
     function ls;eza $argv;end
     function cls;clear $argv;end
     function la;eza -la $argv;end
@@ -96,6 +98,8 @@ if status is-interactive
     function fishconf;cd ~/.config/fish;end
     function nvim;CC=$CC $PREFIX/bin/nvim $argv;end
     function 7z;7zz $argv;end
+    # Until they fix the compilation with clang, this will always be g++
+    function hyprpm;CXX=g++ $PREFIX/bin/hyprpm $argv;end
 
     if test (whoami) = "root"
         function rm;$PREFIX/bin/rm -i $argv;end
