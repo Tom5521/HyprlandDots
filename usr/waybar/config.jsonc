@@ -15,8 +15,20 @@
     "network",
     "custom/updates",
   ],
-  "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["cpu", "memory", "temperature", "battery", "tray", "clock"],
+  "modules-center": [
+    "cava",
+    "hyprland/workspaces",
+    "cava"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "tray",
+    "hyprland/window",
+    "clock",
+  ],
   // Modules configuration
   "hyprland/workspaces": {
     "disable-scroll": false,
@@ -47,7 +59,7 @@
     },
   },
   "hyprland/window": {
-    "max-length": 50,
+    "max-length": 40,
     "separate-outputs": true,
   },
   "sway/mode": {
@@ -56,7 +68,10 @@
   "sway/scratchpad": {
     "format": "{icon} {count}",
     "show-empty": false,
-    "format-icons": ["", ""],
+    "format-icons": [
+      "",
+      ""
+    ],
     "tooltip": true,
     "tooltip-format": "{app}: {title}",
   },
@@ -115,12 +130,26 @@
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""],
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
   },
   "backlight": {
     // "device": "acpi_video1",
     "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
   },
   "battery": {
     "states": {
@@ -134,7 +163,13 @@
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
   },
   "battery#bat2": {
     "bat": "BAT2",
@@ -163,7 +198,11 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""],
+      "default": [
+        "",
+        "",
+        ""
+      ],
     },
     "on-click": "pavucontrol",
   },
@@ -181,7 +220,7 @@
       "dnd-inhibited-none": "",
     },
     "return-type": "json",
-    "exec-if": "which swaync-client",
+    "exec-if": "command -v swaync-client",
     "exec": "swaync-client -swb",
     "on-click": "sleep 0.1 && swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
@@ -194,7 +233,7 @@
       "has-updates": "󱍷",
       "updated": "󰂪",
     },
-    "exec-if": "which waybar-module-pacman-updates",
+    "exec-if": "command -v waybar-module-pacman-updates",
     "exec": "waybar-module-pacman-updates",
     "on-click": "~/.config/hypr/scripts/topgrade.sh",
   },
@@ -204,7 +243,7 @@
     "autosens": 1,
     "hide_on_silence": true,
     "sensitivity": 1,
-    "bars": 10,
+    "bars": 15,
     "lower_cutoff_freq": 50,
     "higher_cutoff_freq": 10000,
     "method": "pipewire",
@@ -212,10 +251,19 @@
     "stereo": true,
     "reverse": false,
     "bar_delimiter": 0,
-    "monstercat": false,
+    "monstercat": true,
     "waves": false,
     "noise_reduction": 0.77,
     "input_delay": 0,
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ],
   },
 }
