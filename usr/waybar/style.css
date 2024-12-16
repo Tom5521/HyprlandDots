@@ -38,7 +38,11 @@
   color: @base05;
 }
 
-#workspaces button.visible {
+#workspaces button.inactive {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: black;
 }
 
 #workspaces button.active {
@@ -72,12 +76,7 @@
 #memory,
 #network,
 #pulseaudio,
-#idle_inhibitor,
-#backlight,
-#custom-storage,
 #custom-updates,
-#custom-weather,
-#custom-mail,
 #clock,
 #window,
 #temperature {

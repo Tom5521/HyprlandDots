@@ -15,11 +15,7 @@
     "network",
     "custom/updates",
   ],
-  "modules-center": [
-    "cava",
-    "hyprland/workspaces",
-    "cava"
-  ],
+  "modules-center": ["cava", "hyprland/workspaces", "cava"],
   "modules-right": [
     "cpu",
     "memory",
@@ -35,7 +31,7 @@
     "on-click": "activate",
     "all-outputs": false,
     "format": "{icon}",
-    //"format": "{name}",
+    // "format": "{name}",
     "on-scroll-up": "hyprctl dispatch workspace m-1 > /dev/null",
     "on-scroll-down": "hyprctl dispatch workspace m+1 > /dev/null",
     "format-icons": {
@@ -49,64 +45,9 @@
       "default": "",
     },
   },
-  "keyboard-state": {
-    "numlock": false,
-    "capslock": false,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": "",
-    },
-  },
   "hyprland/window": {
-    "max-length": 40,
+    "max-length": 20,
     "separate-outputs": true,
-  },
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>",
-  },
-  "sway/scratchpad": {
-    "format": "{icon} {count}",
-    "show-empty": false,
-    "format-icons": [
-      "",
-      ""
-    ],
-    "tooltip": true,
-    "tooltip-format": "{app}: {title}",
-  },
-  "mpd": {
-    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-    "format-disconnected": "Disconnected ",
-    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-    "unknown-tag": "N/A",
-    "interval": 2,
-    "consume-icons": {
-      "on": " ",
-    },
-    "random-icons": {
-      "off": "<span color=\"#f53c3c\"></span> ",
-      "on": " ",
-    },
-    "repeat-icons": {
-      "on": " ",
-    },
-    "single-icons": {
-      "on": "1 ",
-    },
-    "state-icons": {
-      "paused": "",
-      "playing": "",
-    },
-    "tooltip-format": "MPD (connected)",
-    "tooltip-format-disconnected": "MPD (disconnected)",
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": "",
-    },
   },
   "tray": {
     // "icon-size": 21,
@@ -130,26 +71,7 @@
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ],
-  },
-  "backlight": {
-    // "device": "acpi_video1",
-    "format": "{percent}% {icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
+    "format-icons": ["", "", ""],
   },
   "battery": {
     "states": {
@@ -163,16 +85,7 @@
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-  },
-  "battery#bat2": {
-    "bat": "BAT2",
+    "format-icons": ["", "", "", "", ""],
   },
   "network": {
     //"interface": "wlan0", // (Optional) To force the use of this interface
@@ -198,11 +111,7 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ],
+      "default": ["", "", ""],
     },
     "on-click": "pavucontrol",
   },
@@ -255,15 +164,6 @@
     "waves": false,
     "noise_reduction": 0.77,
     "input_delay": 0,
-    "format-icons": [
-      "▁",
-      "▂",
-      "▃",
-      "▄",
-      "▅",
-      "▆",
-      "▇",
-      "█"
-    ],
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
   },
 }
