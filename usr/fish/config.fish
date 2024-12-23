@@ -1,7 +1,24 @@
+source $__fish_config_dir/check-termux.fish
+
+# C/C++ compilers
+#
+# I LOVE clang!
+set CC clang
+set CXX clang++
+
+set EDITOR nvim
+
+# Add ~/go/bin/ and ~/bin to the PATH
+set PATH $HOME/go/bin $HOME/bin $PATH
+set XDG_DATA_DIRS $HOME/.local/share/ $XDG_DATA_DIRS
+
+# Until they fix the compilation with clang, this will always be g++
+function hyprpm;CXX=g++ $PREFIX/bin/hyprpm $argv;end
+function which;command -v $argv;end # Why the fuck which is deprecated?!?!?!
+function nvim;CC=$CC CXX=$CXX $PREFIX/bin/nvim $argv;end
+
 if status is-interactive
     set SKIP_GREETING 0 # 1 to disable usr and root grettings
-
-    source $__fish_config_dir/check-termux.fish
 
     # Functions
     function fish_greeting
@@ -27,24 +44,11 @@ if status is-interactive
 
     # Sets
 
-    # C/C++ compilers
-    #
-    # I LOVE clang!
-    set CC clang
-    set CXX clang++
-
     # WIN32 C/C++ cross compilers
     set WIN32_CC x86_64-w64-mingw32-gcc
     set WIN32_CXX x86_64-w64-mingw32-g++
 
-    set EDITOR nvim
-    
     set USR $USER
-
-    # Add ~/go/bin/ and ~/bin to the PATH
-    set PATH $HOME/go/bin $HOME/bin $PATH
-    set XDG_DATA_DIRS $HOME/.local/share/ $XDG_DATA_DIRS
-
 
     function mv
         command -v advmv > /dev/null
@@ -76,7 +80,6 @@ if status is-interactive
     end
 
     # Aliases
-    function which;command -v $argv;end # Why the fuck which is deprecated?!?!?!
     function ls;eza $argv;end
     function cls;clear $argv;end
     function la;eza -la $argv;end
@@ -96,10 +99,6 @@ if status is-interactive
     function fdisk;please fdisk $argv;end
     function spacman;please pacman $argv;end
     function fishconf;cd ~/.config/fish;end
-    function nvim;CC=$CC $PREFIX/bin/nvim $argv;end
-    function 7z;7zz $argv;end
-    # Until they fix the compilation with clang, this will always be g++
-    function hyprpm;CXX=g++ $PREFIX/bin/hyprpm $argv;end
 
     if test (whoami) = "root"
         function rm;$PREFIX/bin/rm -i $argv;end
