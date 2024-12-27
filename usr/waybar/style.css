@@ -38,6 +38,10 @@
   color: @base05;
 }
 
+#workspaces button:hover {
+  background: rgba(24, 24, 24, 0);
+}
+
 #workspaces button.inactive {
   border-style: solid;
   border-width: 1px;
