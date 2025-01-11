@@ -87,6 +87,11 @@ if status is-interactive
     abbr --add rmf rm -rf
     abbr --add autoinst yay --noconfirm -S
     abbr --add autorem yay --noconfirm -R
+    abbr --add hyprcfg cd ~/.config/hypr/
+    abbr --add i3cfg cd ~/.config/i3/
+    abbr --add spacman sudo pacman
+    abbr --add fishcfg cd ~/.config/fish/
+    abbr --add docker sudo docker
 
     # Aliases
     function ls;eza $argv;end
@@ -97,17 +102,11 @@ if status is-interactive
     function please;sudo $argv;end
     function s;sudo $argv;end
     function poweroff;systemctl poweroff $argv;end
-    # function mkd;mkdir $argv;end
-    function walk;walk --icons $argv;end
+    function walk;fish -c "walk --icons $argv";end
     function umount;please umount $argv;end
     function mount;please mount $argv;end
     function claer;cls $argv;end
-    function docker;please docker $argv;end
-    function hyprconf;cd ~/.config/hypr/;end
-    function i3conf;cd ~/.config/i3/;end
     function fdisk;please fdisk $argv;end
-    function spacman;please pacman $argv;end
-    function fishconf;cd ~/.config/fish;end
 
     if test (whoami) = "root"
         function rm;$PREFIX/bin/rm -i $argv;end
