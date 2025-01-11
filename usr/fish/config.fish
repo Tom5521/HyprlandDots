@@ -79,16 +79,25 @@ if status is-interactive
         end
     end
 
+    # Abbreviations
+
+    abbr --add mkd mkdir
+    abbr --add inst yay -S
+    abbr --add rem yay -R
+    abbr --add rmf rm -rf
+    abbr --add autoinst yay --noconfirm -S
+    abbr --add autorem yay --noconfirm -R
+
     # Aliases
     function ls;eza $argv;end
     function cls;clear $argv;end
     function la;eza -la $argv;end
     function dir;$PREFIX/bin/ls --color $argv;end
-    function old-dir;$PREFIX/in/dir $argv;end
+    function old-dir;$PREFIX/bin/dir $argv;end
     function please;sudo $argv;end
     function s;sudo $argv;end
     function poweroff;systemctl poweroff $argv;end
-    function mkd;mkdir $argv;end
+    # function mkd;mkdir $argv;end
     function walk;walk --icons $argv;end
     function umount;please umount $argv;end
     function mount;please mount $argv;end

@@ -4,6 +4,6 @@ if set -q TERMUX_VERSION
 end
 
 if not set -q PREFIX
-  set PREFIX /usr
+  set PREFIX /
 end
 
