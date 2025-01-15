@@ -93,6 +93,7 @@ if status is-interactive
     abbr --add spacman sudo pacman
     abbr --add fishcfg cd ~/.config/fish/
     abbr --add docker sudo docker
+    abbr --add cdp cd $(pwd -P)
 
     # Aliases
     function ls;eza $argv;end
