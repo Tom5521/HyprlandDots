@@ -7,4 +7,4 @@ fi
 
 cd ~/.config/hypr/scripts/
 
-./nvim.sh "$dir"
+EXEC_NEOVIDE=1 ./nvim.sh "$dir"
