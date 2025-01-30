@@ -35,7 +35,7 @@ install-dependencies:
     yay -S base-devel rustup cmake swaync hyprland-git waybar neovim lua lua51 \
     btop kitty wlsunset topgrade zenity nwg-look nwg-clipman cliphist wl-clipboard network-manager-applet \
     kdeconnect kactivitymanagerd wofi grim slurp gtklock playerctl xdg-desktop-portal-hyprland-git \
-    mate-polkit alsa-utils hyprprop fish luarocks tree-sitter-lua wlroots 7-zip hyprshade hyprlauncher glava \
+    mate-polkit alsa-utils hyprprop fish luarocks tree-sitter-lua wlroots 7-zip hyprshade walker-bin glava \
     wpaperd nwg-clipman \
     --noconfirm 
 
