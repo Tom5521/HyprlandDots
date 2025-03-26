@@ -15,7 +15,11 @@
     "network",
     "custom/updates",
   ],
-  "modules-center": ["cava", "hyprland/workspaces", "cava"],
+  "modules-center": [
+    "cava",
+    "hyprland/workspaces",
+    "cava"
+  ],
   "modules-right": [
     "cpu",
     "memory",
@@ -71,7 +75,11 @@
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""],
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
   },
   "battery": {
     "states": {
@@ -85,7 +93,13 @@
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": ["", "", "", "", ""],
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
   },
   "network": {
     //"interface": "wlan0", // (Optional) To force the use of this interface
@@ -95,6 +109,7 @@
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "max-length": 20,
   },
   "pulseaudio": {
     // "scroll-step": 10, // %, can be a float
@@ -111,7 +126,11 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""],
+      "default": [
+        "",
+        "",
+        ""
+      ],
     },
     "on-click": "pavucontrol",
   },
@@ -164,6 +183,15 @@
     "waves": false,
     "noise_reduction": 0.77,
     "input_delay": 0,
-    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "format-icons": [
+      "▁",
+      "▂",
+      "▃",
+      "▄",
+      "▅",
+      "▆",
+      "▇",
+      "█"
+    ],
   },
 }
