@@ -26,6 +26,7 @@ if status is-interactive
             return
         end
         set -l cows ~/.config/fish
+        # In this case, this files **MUST** be in /root/.config/fish directory, for security reasons
         if test (whoami) = "root"
             cowsay -e "0" -f "$cows/shark.cow" "What are we breaking today, boss?" \
             | lolcat -a -d 1
