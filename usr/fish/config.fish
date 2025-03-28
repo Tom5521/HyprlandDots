@@ -19,8 +19,7 @@ function nvim;CC=$CC CXX=$CXX $PREFIX/bin/nvim $argv;end
 
 if status is-interactive
     set SKIP_GREETING 0 # 1 to disable usr and root grettings
-
-    # Functions
+    # Functions. 
     function fish_greeting
         if test $SKIP_GREETING -eq 1
             return
