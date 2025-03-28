@@ -1,4 +1,3 @@
-
 if set -q TERMUX_VERSION
   set IS_TERMUX 1
 end
