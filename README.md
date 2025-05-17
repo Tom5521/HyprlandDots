@@ -1,5 +1,7 @@
 # My hyprland dots
 
+# Moved to [dots](https://github.com/Tom5521/dots)
+
 ## Installing
 
 You can install it running the following commands:
