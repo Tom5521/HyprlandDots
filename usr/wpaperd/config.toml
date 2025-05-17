@@ -1,8 +1,0 @@
-[default]
-duration = "10m"
-mode = "center"
-sorting = "random"
-path = "~/.config/hypr/wallpapers/selected/"
-
-[default.transition.grid-flip]
-divider-width = 0.01

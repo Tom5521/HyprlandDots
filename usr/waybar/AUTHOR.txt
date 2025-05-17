@@ -1,4 +1,0 @@
-
-The style.css was copied(and SUPER modified) from: https://github.com/coffebar/dotfiles.git 
-
-Maded by coffebar
